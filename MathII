@@ -1,0 +1,32 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#define pause system("pause")
+#define cls system("cls")
+
+int main() { 
+  // declare variables
+     int x, y, z, a, b,c;
+  
+  // input values
+     printf("Enter the first integer.: ");
+     scanf("%i", &x);
+     printf("Enter the second integer: ");
+     scanf("%i", &y);          
+     
+  // Do the math
+     z = x / y;
+     a = x + y + z;
+     b = a * a * a;
+     c = z + a + b;      
+     
+  // display results
+     cls; // clear the screen
+     printf("\n\n\nx = %i and y = %i.\n", x, y);
+     printf("X/Y equals %i.\n", z);
+     printf("X + Y + Z equals %i.\n", a);
+     printf("A cubed equals %i.\n", b);
+     printf("Z + A + B  equals %i.\n\n\n\n", c);
+                 
+  pause;     
+} // end main 
