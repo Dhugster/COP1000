@@ -1,0 +1,50 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#define PAUSE system("pause")
+
+int main(){
+   float week1 = 0.0, week2 = 0.0, week3 = 0.0;
+   
+   printf("Enter first week amount spent on groceries.: ");
+   scanf("%f", &week1);   
+   printf("Enter second week amount spent on groceries: ");
+   scanf("%f", &week2);   
+   printf("Enter third week amount spent on groceries.: ");
+   scanf("%f", &week3);   
+
+  // WEEK ONE   
+   printf("Based on week one grocery bill: \n");
+   if(week1 < 50.0)
+      printf("\tYou must be starving.\n");
+   else if(week1 > 200)
+           printf("\tYou are getting fat.\n");
+        else
+            printf("\tYou are eating well.\n");
+// WEEK TWO
+   printf("Based on week two grocery bill: \n");
+   if(week2 < 50.0)
+      printf("\tYou must be starving.\n");
+   else if(week2 > 200)
+           printf("\tYou are getting fat.\n");
+        else
+            printf("\tYou are eating well.\n");            
+
+// WEEK THREE
+   printf("Based on week three grocery bill: \n");
+   if(week3 < 50.0)
+      printf("\tYou must be starving.\n");
+   else if(week3 > 200)
+           printf("\tYou are getting fat.\n");
+        else
+            printf("\tYou are eating well.\n"); 
+            
+   if(week2 > week1)
+      printf("You ate more in week2\n");
+   if(week3 < week1 && week3 < week2)
+      printf("You are on a diet since week 3 is your lowest bill\n");
+         
+                  
+            
+   PAUSE;
+} // end of main
