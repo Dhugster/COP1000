@@ -1,0 +1,92 @@
+#define _CRT_SECURE_NO_WARNINGS
+#define PAUSE system("pause")
+#define CLS system("cls")
+#define FLUSH fflush(stdin)
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  // Declare Variables Here
+     char userChoice = 'A';
+     int i = 0, j = 0; // loop control
+     int total = 0, count = 0;
+     char prime = 'Y', triangle = 'X';
+     float grade = 0.0;
+  
+     do {
+       CLS;
+       printf("\n\n\n");
+       printf("-------------------------------\n");
+       printf("---------  Main Menu ----------\n");
+       printf("-------------------------------\n");
+       printf("\tA: Even Numbers\n");
+       printf("\tB: Prime Numbers\n");
+       printf("\tC: Triangle\n");
+       printf("\tD: Letter Grade \n");
+       printf("\tQ: Quit Program\n\n");
+       printf("\tEnter selection: ");
+       scanf("%c", &userChoice); FLUSH;
+       
+       switch(toupper(userChoice)) {
+          case 'A': // Even
+            for(i = 1; i <= 100; i++)
+              if(i % 2 == 0){
+                 printf("\t%i is an even number\n", i);
+                 total = total + i;
+                 count++;
+              }  // end if
+              printf("The sum of the even numbers between 1 and 100 is %i.\n", total);
+              printf("There are %i even numbers between 1 and 100.\n", count);
+              PAUSE;                   
+            break;
+          case 'B': // Prime
+            printf("The prime numbers between 1 and 100 are as follows:\n");
+            for(i = 2; i <= 100; i++){
+               prime = 'Y';
+               for(j = 2; j < i; j++)
+                  if(i % j == 0)
+                     prime = 'N';
+               if(prime == 'Y')
+                  printf("%i\n", i);
+            } // end outter for loop
+            PAUSE;      
+            break;
+          case 'C': // triangle
+            printf("Please enter a character for the triangle: ");
+            scanf("%c", &triangle); FLUSH;
+            for(i = 0; i < 25; i++) {
+               for(j = 0; j <= i; j++)
+                  printf("%c", triangle);
+               printf("\n");
+            } // end outer loop
+            PAUSE;
+            break;
+          case 'D': // Letter Grade
+            printf("Enter your grade: ");
+            scanf("%f", &grade); FLUSH;
+            if(grade <= 1)
+               grade = grade * 100;
+               if(grade >= 90)
+                  printf("Your letter grade is an: A\n");
+               else if(grade >= 80)
+                  printf("Your letter grade is a.: B\n");
+               else if(grade >= 70)
+                  printf("Your letter grade is a.: C\n");
+               else if(grade >= 60)
+                  printf("Your letter grade is a.: D\n");
+               else 
+                  printf("Your letter grade is a.: F\n");
+            PAUSE;
+            break;
+          case 'Q':
+            printf("Thanks for using my program...have a great day!\n");
+            PAUSE;
+            break;
+          default:
+            printf("Invalid selection...pick from menu options only!\n");
+            PAUSE;
+            break;
+       } // end switch
+     }
+     while(toupper(userChoice) != 'Q');
+} // end main
