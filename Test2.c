@@ -15,7 +15,7 @@ Date Due: 2/28/2016
 int main() {
 	int num, count = 0, high = 0, low = 0, total = 0;
 	float avg;
-	char choice = ' ', again;
+	char number = ' ', again;
 
 	printf("\t\t      =====================\n");
 	printf("\t\t      ==    MAIN MENU    ==\n");
