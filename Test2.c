@@ -27,14 +27,14 @@ int main() {
 	printf("\t\tE. Display how many numbers were entered.\n");
 	printf("\t\tQ. Quit.\n\n\n");
 	printf("Enter your selection: ");
-	scanf("%c", &choice);
+	scanf("%c", &number);
 
-    switch (choice) {
+    switch (number) {
     case 'A':
         do {
             printf("Enter a number: ");
             scanf("%i", &num);
-            if (count = 0)  {
+            if (count = 0) {
                 high = num;
                 low = num;
             }
